@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌊 Offshore Directory - Universal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Banner Ads -->
+    <div class="banner-ads">
+        <div class="banner-container">
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example1.png" alt="Cracked.to Banner" class="banner-image">
+                </a>
+            </div>
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example2.png" alt="Sinister.ly Banner" class="banner-image">
+                </a>
+            </div>
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example3.png" alt="Offshore.cat Banner" class="banner-image">
+                </a>
+            </div>
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example4.png" alt="Dump.li Banner" class="banner-image">
+                </a>
+            </div>
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example5.png" alt="Minecraft Server Banner" class="banner-image">
+                </a>
+            </div>
+            <div class="banner-ad">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example6.png" alt="VPN Service Banner" class="banner-image">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>🌊 Offshore Directory</h1>
+                <button id="submitBtn" class="submit-btn">
+                    <i class="fas fa-plus"></i>
+                    Submit Service
+                </button>
+            </div>
+            
+            <nav>
+                <a href="#" class="nav-link active" data-category="all">All</a>
+                <a href="#" class="nav-link" data-category="recommended">Recommended</a>
+                <a href="#" class="nav-link" data-category="email">Email</a>
+                <a href="#" class="nav-link" data-category="vpn">VPN</a>
+                <a href="#" class="nav-link" data-category="hosting">Hosting</a>
+                <a href="#" class="nav-link" data-category="domains">Domains</a>
+                <a href="#" class="nav-link" data-category="crypto">Crypto</a>
+                <a href="#" class="nav-link" data-category="gaming">Gaming</a>
+                <a href="#" class="nav-link" data-category="social">Social</a>
+                <a href="#" class="nav-link" data-category="tools">Tools</a>
+                <a href="#" class="nav-link" data-category="products">Products</a>
+                <a href="#" class="nav-link" data-category="password-managers">Password Managers</a>
+                <a href="#" class="nav-link" data-category="chess">Chess</a>
+                <button id="moreBtn" class="more-btn">
+                    <i class="fas fa-ellipsis-h"></i>
+                    More
+                </button>
+            </nav>
+            
+            <div class="stats-bar">
+                <div class="stats-left">
+                    <img src="https://i.imgur.com/example7.png" alt="CAT Logo" class="cat-logo">
+                    <span class="project-tag">PROJECT</span>
+                </div>
+                <div class="stats-center">
+                    <span class="updated-date">Updated: 2025-07-30</span>
+                    <span class="total-sites">Total Sites: 600+</span>
+                </div>
+                <div class="stats-right">
+                    <div class="status-legend">
+                        <div class="legend-item">
+                            <i class="fas fa-star" style="color: #51cf66;"></i>
+                            Premium
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-check" style="color: #4ecdc4;"></i>
+                            Verified
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-dollar-sign" style="color: #ffd93d;"></i>
+                            Capitalist
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-question" style="color: #888888;"></i>
+                            Unverified
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-trash" style="color: #ff6b6b;"></i>
+                            Trash
+                        </div>
+                    </div>
+                    <a href="https://t.me/offshorecat" target="_blank" id="telegramBtn" class="telegram-btn">
+                        <i class="fab fa-telegram"></i>
+                        Telegram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="slogan">
+                "The ultimate directory for privacy-focused services"
+            </div>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <label for="searchInput">Search Services:</label>
+                <input type="text" id="searchInput" placeholder="Search by name, description, or category...">
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-status="all">All Status</button>
+                <button class="filter-btn" data-status="premium">Premium</button>
+                <button class="filter-btn" data-status="verified">Verified</button>
+                <button class="filter-btn" data-status="capitalist">Capitalist</button>
+                <button class="filter-btn" data-status="unverified">Unverified</button>
+                <button class="filter-btn" data-status="trash">Trash</button>
+            </div>
+            
+            <div class="table-container">
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Website</th>
+                            <th>Category</th>
+                            <th>Company</th>
+                            <th>Country</th>
+                            <th>Log Policy</th>
+                            <th>DMCA</th>
+                            <th>Payment Methods</th>
+                            <th>Status</th>
+                            <th>Last Change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesTableBody">
+                        <!-- Services will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Submit Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit New Service</h2>
+            <form id="submitForm">
+                <div class="form-group">
+                    <label for="serviceName">Service Name:</label>
+                    <input type="text" id="serviceName" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceWebsite">Website:</label>
+                    <input type="url" id="serviceWebsite" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Description:</label>
+                    <textarea id="serviceDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="serviceCategory">Category:</label>
+                    <select id="serviceCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="recommended">Recommended</option>
+                        <option value="email">Email</option>
+                        <option value="vpn">VPN</option>
+                        <option value="hosting">Hosting</option>
+                        <option value="domains">Domains</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="social">Social</option>
+                        <option value="tools">Tools</option>
+                        <option value="products">Products</option>
+                        <option value="password-managers">Password Managers</option>
+                        <option value="chess">Chess</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceCompany">Company:</label>
+                    <input type="text" id="serviceCompany" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceCountry">Country:</label>
+                    <input type="text" id="serviceCountry" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceLogPolicy">Log Policy:</label>
+                    <input type="text" id="serviceLogPolicy" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDmca">DMCA:</label>
+                    <input type="text" id="serviceDmca" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceOwnsServers">Owns Servers:</label>
+                    <input type="text" id="serviceOwnsServers" required>
+                </div>
+                <div class="form-group">
+                    <label for="servicePaymentMethods">Payment Methods (comma-separated):</label>
+                    <input type="text" id="servicePaymentMethods" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceStatus">Status:</label>
+                    <select id="serviceStatus" required>
+                        <option value="">Select Status</option>
+                        <option value="premium">Premium</option>
+                        <option value="verified">Verified</option>
+                        <option value="capitalist">Capitalist</option>
+                        <option value="unverified">Unverified</option>
+                        <option value="trash">Trash</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-form-btn">Submit Service</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced offshore services data with comprehensive selection
+        const servicesData = [
+            // RECOMMENDED SERVICES (Premium)
+            {
+                id: 1,
+                name: "ALUY",
+                website: "p.ol.uy",
+                description: "Hosting without compromises.",
+                category: "recommended",
+                company: "ALUY Hosting",
+                country: "uy",
+                logPolicy: "Requires email confirmation",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto", "Credit Card", "PayPal", "Cash"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 2,
+                name: "PrivateAlps",
+                website: "privatealps.net",
+                description: "Your one and only destination for true offshore hosting services, powered by an ethical team of professionals",
+                category: "recommended",
+                company: "PrivateAlps AG",
+                country: "ch",
+                logPolicy: "Requires email confirmation",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto", "Credit Card", "Apple Pay"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 3,
+                name: "ProtonMail",
+                website: "protonmail.com",
+                description: "Secure email service with end-to-end encryption and privacy-focused features.",
+                category: "recommended",
+                company: "Proton Technologies AG",
+                country: "ch",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal", "Crypto"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 4,
+                name: "Signal",
+                website: "signal.org",
+                description: "Privacy-focused messaging app with advanced encryption features.",
+                category: "recommended",
+                company: "Signal Foundation",
+                country: "us",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Free", "Donations"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 5,
+                name: "Mullvad",
+                website: "mullvad.net",
+                description: "Privacy-focused VPN with anonymous accounts and no personal data collection.",
+                category: "recommended",
+                company: "Mullvad VPN AB",
+                country: "se",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto", "Cash", "Credit Card"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 6,
+                name: "Librem 5",
+                website: "puri.sm",
+                description: "Security-focused smartphone with hardware kill switches.",
+                category: "recommended",
+                company: "Purism",
+                country: "us",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "Crypto"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+
+            // CHESS SERVICES
+            {
+                id: 1001,
+                name: "Lagging Chess",
+                website: "lagging.site",
+                description: "The Future of chess online replacing lichess and other chess websites. Works on every device like console to laptop, mobile. Premium features, some ads, custom ground and lots of features.",
+                category: "chess",
+                company: "Lagging Chess",
+                country: "us",
+                logPolicy: "Requires email confirmation",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Free", "Premium", "Ads"],
+                status: "premium",
+                lastChange: "2025-07-30"
+            },
+            {
+                id: 1002,
+                name: "Lichess",
+                website: "lichess.org",
+                description: "Free, open-source chess server with no ads, no tracking, and strong privacy protection. Highly rated by chess community.",
+                category: "chess",
+                company: "Lichess",
+                country: "fr",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Free", "Donations"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 1003,
+                name: "Chess.com",
+                website: "chess.com",
+                description: "Popular chess platform with extensive features, lessons, and tournaments. Mixed reviews due to premium features and data collection.",
+                category: "chess",
+                company: "Chess.com",
+                country: "us",
+                logPolicy: "Requires email confirmation",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal", "Premium"],
+                status: "capitalist",
+                lastChange: "2025-07-29"
+            },
+
+            // EMAIL SERVICES
+            {
+                id: 601,
+                name: "PissMail",
+                website: "pissmail.com",
+                description: "Edgy email service with privacy-focused domains and no logging policy.",
+                category: "email",
+                company: "PissMail",
+                country: "unknown",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Free", "Donations"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 602,
+                name: "MailHaven",
+                website: "mailhaven.su",
+                description: "Privacy-focused email service with strong encryption and anonymous registration.",
+                category: "email",
+                company: "MailHaven",
+                country: "unknown",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto", "Credit Card"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 603,
+                name: "Cock.li",
+                website: "cock.li",
+                description: "Email service owned by Vincent Canfield with privacy focus.",
+                category: "email",
+                company: "Cock.li",
+                country: "cw",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 604,
+                name: "Tutanota",
+                website: "tutanota.com",
+                description: "German encrypted email service with zero-knowledge encryption.",
+                category: "email",
+                company: "Tutanota",
+                country: "de",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 605,
+                name: "Mailfence",
+                website: "mailfence.com",
+                description: "Belgian encrypted email service with digital signatures.",
+                category: "email",
+                company: "Mailfence",
+                country: "be",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+
+            // PASSWORD MANAGERS
+            {
+                id: 2001,
+                name: "Bitwarden",
+                website: "bitwarden.com",
+                description: "Open-source password manager with cloud sync",
+                category: "password-managers",
+                company: "Bitwarden",
+                country: "us",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Free", "Premium"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 2002,
+                name: "KeePass",
+                website: "keepass.info",
+                description: "Open-source password manager with local storage",
+                category: "password-managers",
+                company: "KeePass",
+                country: "de",
+                logPolicy: "No logs",
+                dmca: "N/A",
+                ownsServers: "No",
+                paymentMethods: ["Free"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 2003,
+                name: "1Password",
+                website: "1password.com",
+                description: "Premium password manager with advanced features",
+                category: "password-managers",
+                company: "1Password",
+                country: "ca",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "capitalist",
+                lastChange: "2025-07-29"
+            },
+
+            // VPN SERVICES
+            {
+                id: 3001,
+                name: "NordVPN",
+                website: "nordvpn.com",
+                description: "Popular VPN service with global servers",
+                category: "vpn",
+                company: "NordVPN",
+                country: "pa",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal", "Cryptocurrency"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 3002,
+                name: "ExpressVPN",
+                website: "expressvpn.com",
+                description: "High-speed VPN with strong privacy",
+                category: "vpn",
+                company: "ExpressVPN",
+                country: "vg",
+                logPolicy: "No logs",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+
+            // CRYPTO SERVICES
+            {
+                id: 4001,
+                name: "Binance",
+                website: "binance.com",
+                description: "Major cryptocurrency exchange",
+                category: "crypto",
+                company: "Binance",
+                country: "mt",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "Bank Transfer", "Cryptocurrency"],
+                status: "capitalist",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 4002,
+                name: "Coinbase",
+                website: "coinbase.com",
+                description: "Popular crypto exchange and wallet",
+                category: "crypto",
+                company: "Coinbase",
+                country: "us",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "Bank Transfer"],
+                status: "capitalist",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 4003,
+                name: "Uniswap",
+                website: "uniswap.org",
+                description: "Decentralized exchange protocol",
+                category: "crypto",
+                company: "Uniswap Labs",
+                country: "us",
+                logPolicy: "No logs",
+                dmca: "N/A",
+                ownsServers: "No",
+                paymentMethods: ["Cryptocurrency"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+
+            // HOSTING SERVICES
+            {
+                id: 5001,
+                name: "OVH",
+                website: "ovh.com",
+                description: "European hosting provider with privacy focus",
+                category: "hosting",
+                company: "OVH",
+                country: "fr",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal", "Bank Transfer"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 5002,
+                name: "Hetzner",
+                website: "hetzner.com",
+                description: "German hosting provider",
+                category: "hosting",
+                company: "Hetzner",
+                country: "de",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal", "Bank Transfer"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+
+            // DOMAIN SERVICES
+            {
+                id: 6001,
+                name: "Namecheap",
+                website: "namecheap.com",
+                description: "Domain registrar with privacy protection",
+                category: "domains",
+                company: "Namecheap",
+                country: "us",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 6002,
+                name: "Porkbun",
+                website: "porkbun.com",
+                description: "Domain registrar with competitive pricing",
+                category: "domains",
+                company: "Porkbun",
+                country: "us",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "verified",
+                lastChange: "2025-07-29"
+            },
+            {
+                id: 6003,
+                name: "Njalla",
+                website: "njal.la",
+                description: "Privacy-focused domain registrar",
+                category: "domains",
+                company: "Njalla",
+                country: "se",
+                logPolicy: "No logs",
+                dmca: "Ignored",
+                ownsServers: "Yes",
+                paymentMethods: ["Crypto", "Credit Card"],
+                status: "premium",
+                lastChange: "2025-07-29"
+            },
+
+            // PRODUCTS
+            {
+                id: 10001,
+                name: "iPhone (Jailbroken)",
+                website: "apple.com",
+                description: "Apple smartphone with jailbreak for privacy",
+                category: "products",
+                company: "Apple",
+                country: "us",
+                logPolicy: "Requires KYC",
+                dmca: "Enforced",
+                ownsServers: "Yes",
+                paymentMethods: ["Credit Card", "PayPal"],
+                status: "trash",
+                lastChange: "2025-07-29"
+            }
+        ];
+
+        // Application state
+        let currentServices = [...servicesData];
+        let selectedCategory = 'all';
+        let selectedStatus = 'all';
+        let searchQuery = '';
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const servicesTableBody = document.getElementById('servicesTableBody');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const moreBtn = document.getElementById('moreBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const modal = document.getElementById('submitModal');
+        const closeBtn = document.querySelector('.close');
+        const submitForm = document.getElementById('submitForm');
+        const telegramBtn = document.getElementById('telegramBtn');
+        const themeToggle = document.getElementById('themeToggle');
+
+        // Initialize the application
+        function init() {
+            renderServices();
+            setupEventListeners();
+            updateStats();
+            applyTheme();
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Search functionality
+            searchInput.addEventListener('input', handleSearch);
+            
+            // Category navigation
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = link.dataset.category;
+                    selectCategory(category);
+                });
+            });
+            
+            // Status filters
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const status = btn.dataset.status;
+                    selectStatus(status);
+                });
+            });
+            
+            // More button
+            moreBtn.addEventListener('click', toggleMoreCategories);
+            
+            // Modal functionality
+            submitBtn.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+            
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            submitForm.addEventListener('submit', handleFormSubmission);
+            
+            // Telegram button
+            telegramBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.open('https://t.me/offshorecat', '_blank');
+            });
+
+            // Theme toggle
+            themeToggle.addEventListener('click', toggleTheme);
+        }
+
+        // Handle search
+        function handleSearch() {
+            searchQuery = searchInput.value.toLowerCase();
+            filterServices();
+        }
+
+        // Select category
+        function selectCategory(category) {
+            selectedCategory = category;
+            
+            // Update navigation
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`[data-category="${category}"]`).classList.add('active');
+            
+            filterServices();
+        }
+
+        // Select status
+        function selectStatus(status) {
+            selectedStatus = status;
+            
+            // Update filter buttons
+            filterBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-status="${status}"]`).classList.add('active');
+            
+            filterServices();
+        }
+
+        // Filter services
+        function filterServices() {
+            currentServices = servicesData.filter(service => {
+                const matchesSearch = searchQuery === '' || 
+                    service.name.toLowerCase().includes(searchQuery) ||
+                    service.description.toLowerCase().includes(searchQuery);
+                
+                const matchesCategory = selectedCategory === 'all' || 
+                    service.category === selectedCategory;
+                
+                const matchesStatus = selectedStatus === 'all' || 
+                    service.status === selectedStatus;
+                
+                return matchesSearch && matchesCategory && matchesStatus;
+            });
+            
+            renderServices();
+        }
+
+        // Render services
+        function renderServices() {
+            servicesTableBody.innerHTML = '';
+            
+            currentServices.forEach(service => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <strong>${service.name}</strong><br>
+                        <small>${service.description}</small>
+                    </td>
+                    <td>
+                        <a href="https://${service.website}" target="_blank" class="website-link">
+                            ${service.website}
+                        </a>
+                    </td>
+                    <td>${service.category}</td>
+                    <td>${service.company}</td>
+                    <td>
+                        <img src="flags/${service.country}.png" alt="${service.country.toUpperCase()}" 
+                             class="country-flag" onerror="this.style.display='none'">
+                        ${service.country.toUpperCase()}
+                    </td>
+                    <td>${service.logPolicy}</td>
+                    <td>${service.dmca}</td>
+                    <td>
+                        <div class="payment-methods">
+                            ${service.paymentMethods.map(method => 
+                                `<span class="payment-method">${method}</span>`
+                            ).join('')}
+                        </div>
+                    </td>
+                    <td>
+                        <span class="status ${service.status}">${service.status.toUpperCase()}</span>
+                    </td>
+                    <td>${service.lastChange}</td>
+                `;
+                servicesTableBody.appendChild(row);
+            });
+        }
+
+        // Toggle more categories
+        function toggleMoreCategories() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('show-more');
+        }
+
+        // Handle form submission
+        function handleFormSubmission(e) {
+            e.preventDefault();
+            
+            const newService = {
+                id: Date.now(),
+                name: document.getElementById('serviceName').value,
+                website: document.getElementById('serviceWebsite').value,
+                description: document.getElementById('serviceDescription').value,
+                category: document.getElementById('serviceCategory').value,
+                company: document.getElementById('serviceCompany').value,
+                country: document.getElementById('serviceCountry').value,
+                logPolicy: document.getElementById('serviceLogPolicy').value,
+                dmca: document.getElementById('serviceDmca').value,
+                ownsServers: document.getElementById('serviceOwnsServers').value,
+                paymentMethods: document.getElementById('servicePaymentMethods').value.split(',').map(s => s.trim()),
+                status: document.getElementById('serviceStatus').value,
+                lastChange: new Date().toISOString().split('T')[0]
+            };
+            
+            servicesData.push(newService);
+            currentServices.push(newService);
+            renderServices();
+            
+            e.target.reset();
+            modal.style.display = 'none';
+            
+            showNotification('Service submitted successfully!', 'success');
+        }
+
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Update stats
+        function updateStats() {
+            document.querySelector('.total-sites').textContent = `Total Sites: ${servicesData.length}+`;
+        }
+
+        // Apply theme
+        function applyTheme() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme === 'dark' || (prefersDark && !currentTheme)) {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.classList.remove('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            document.body.classList.toggle('dark-mode');
+            themeToggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', currentTheme);
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html> 

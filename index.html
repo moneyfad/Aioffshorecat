@@ -3,54 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>offshore directory</title>
+    <title>🌊 Offshore Directory - Universal</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Banner Ads Section -->
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Banner Ads -->
     <div class="banner-ads">
         <div class="banner-container">
-            <!-- Cracked.to Banner -->
             <div class="banner-ad">
-                <a href="https://cracked.to" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/8XZqJ3L.png" alt="Cracked.to Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example1.png" alt="Cracked.to Banner" class="banner-image">
                 </a>
             </div>
-            
-            <!-- Sinister.ly Banner -->
             <div class="banner-ad">
-                <a href="https://sinister.ly" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/L2QpF9M.png" alt="Sinister.ly Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example2.png" alt="Sinister.ly Banner" class="banner-image">
                 </a>
             </div>
-            
-            <!-- Offshore.cat Banner -->
             <div class="banner-ad">
-                <a href="https://offshore.cat" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/YqK7NvR.png" alt="Offshore.cat Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example3.png" alt="Offshore.cat Banner" class="banner-image">
                 </a>
             </div>
-            
-            <!-- Dump.li Banner -->
             <div class="banner-ad">
-                <a href="https://dump.li" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/P9XmK2F.png" alt="Dump.li Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example4.png" alt="Dump.li Banner" class="banner-image">
                 </a>
             </div>
-            
-            <!-- Minecraft Server Banner -->
             <div class="banner-ad">
-                <a href="#" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/H7JqW5L.png" alt="Minecraft Server Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example5.png" alt="Minecraft Server Banner" class="banner-image">
                 </a>
             </div>
-            
-            <!-- VPN Service Banner -->
             <div class="banner-ad">
-                <a href="#" target="_blank" class="banner-link">
-                    <img src="https://i.imgur.com/V3NqR8M.png" alt="VPN Service Banner" class="banner-image">
+                <a href="#" class="banner-link">
+                    <img src="https://i.imgur.com/example6.png" alt="VPN Service Banner" class="banner-image">
                 </a>
             </div>
         </div>
@@ -59,101 +53,117 @@
     <div class="container">
         <header>
             <div class="header-top">
-                <h1>offshore directory</h1>
-                <button class="submit-btn" id="submitBtn">
+                <h1>🌊 Offshore Directory</h1>
+                <button id="submitBtn" class="submit-btn">
                     <i class="fas fa-plus"></i>
-                    submit service
+                    Submit Service
                 </button>
             </div>
+            
             <nav>
-                <a href="#" class="nav-link active" data-category="all">all</a>
-                <a href="#" class="nav-link" data-category="recommended">recommended</a>
-                <a href="#" class="nav-link" data-category="hosting">hosting</a>
-                <a href="#" class="nav-link" data-category="domains">domains</a>
-                <a href="#" class="nav-link" data-category="vpn">vpn</a>
-                <a href="#" class="nav-link" data-category="messengers">messengers</a>
-                <a href="#" class="nav-link" data-category="crypto">crypto</a>
-                <a href="#" class="nav-link" data-category="email">email</a>
-                <a href="#" class="nav-link" data-category="cdn">cdn</a>
-                <a href="#" class="nav-link" data-category="uploaders">uploaders</a>
-                <a href="#" class="nav-link" data-category="products">products</a>
-                <a href="#" class="nav-link" data-category="password-managers">password managers</a>
-                <a href="#" class="nav-link" data-category="chess">chess</a>
-                <button class="more-btn" id="moreBtn">
+                <a href="#" class="nav-link active" data-category="all">All</a>
+                <a href="#" class="nav-link" data-category="recommended">Recommended</a>
+                <a href="#" class="nav-link" data-category="email">Email</a>
+                <a href="#" class="nav-link" data-category="vpn">VPN</a>
+                <a href="#" class="nav-link" data-category="hosting">Hosting</a>
+                <a href="#" class="nav-link" data-category="domains">Domains</a>
+                <a href="#" class="nav-link" data-category="crypto">Crypto</a>
+                <a href="#" class="nav-link" data-category="gaming">Gaming</a>
+                <a href="#" class="nav-link" data-category="social">Social</a>
+                <a href="#" class="nav-link" data-category="tools">Tools</a>
+                <a href="#" class="nav-link" data-category="products">Products</a>
+                <a href="#" class="nav-link" data-category="password-managers">Password Managers</a>
+                <a href="#" class="nav-link" data-category="chess">Chess</a>
+                <button id="moreBtn" class="more-btn">
                     <i class="fas fa-ellipsis-h"></i>
-                    more
+                    More
                 </button>
             </nav>
-        </header>
 
         <div class="stats-bar">
             <div class="stats-left">
-                <span class="cat-logo">🐱</span>
-                <span class="project-tag">a doxing.lol project</span>
+                    <img src="https://i.imgur.com/example7.png" alt="CAT Logo" class="cat-logo">
+                    <span class="project-tag">PROJECT</span>
             </div>
             <div class="stats-center">
-                <span class="updated-date">updated 2025-07-30</span>
-                <span class="total-sites">total sites 600+</span>
-            </div>
-            <div class="status-legend">
-                <span class="legend-item"><i class="fas fa-star"></i> premium</span>
-                <span class="legend-item"><i class="fas fa-check"></i> verified</span>
-                <span class="legend-item"><i class="fas fa-coins"></i> capitalist</span>
-                <span class="legend-item"><i class="fas fa-question"></i> unverified</span>
-                <span class="legend-item"><i class="fas fa-times"></i> trash</span>
+                    <span class="updated-date">Updated: 2025-07-30</span>
+                    <span class="total-sites">Total Sites: 600+</span>
             </div>
             <div class="stats-right">
-                <button class="telegram-btn" id="telegramBtn">
+                    <div class="status-legend">
+                        <div class="legend-item">
+                            <i class="fas fa-star" style="color: #51cf66;"></i>
+                            Premium
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-check" style="color: #4ecdc4;"></i>
+                            Verified
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-dollar-sign" style="color: #ffd93d;"></i>
+                            Capitalist
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-question" style="color: #888888;"></i>
+                            Unverified
+                        </div>
+                        <div class="legend-item">
+                            <i class="fas fa-trash" style="color: #ff6b6b;"></i>
+                            Trash
+                        </div>
+                    </div>
+                    <a href="https://t.me/offshorecat" target="_blank" id="telegramBtn" class="telegram-btn">
                     <i class="fab fa-telegram"></i>
-                    telegram
-                </button>
+                        Telegram
+                    </a>
             </div>
         </div>
 
         <div class="slogan">
-            egirls aren't real. stopped being tricked by feminine males.
+                "The ultimate directory for privacy-focused services"
         </div>
+        </header>
 
         <main>
             <div class="search-container">
-                <label>search:</label>
-                <input type="text" id="searchInput" placeholder="search records" autocomplete="off">
+                <label for="searchInput">Search Services:</label>
+                <input type="text" id="searchInput" placeholder="Search by name, description, or category...">
             </div>
 
             <div class="filters">
-                <button class="filter-btn active" data-filter="all">all</button>
-                <button class="filter-btn" data-filter="premium">premium</button>
-                <button class="filter-btn" data-filter="verified">verified</button>
-                <button class="filter-btn" data-filter="capitalist">capitalist</button>
-                <button class="filter-btn" data-filter="unverified">unverified</button>
-                <button class="filter-btn" data-filter="trash">trash</button>
+                <button class="filter-btn active" data-status="all">All Status</button>
+                <button class="filter-btn" data-status="premium">Premium</button>
+                <button class="filter-btn" data-status="verified">Verified</button>
+                <button class="filter-btn" data-status="capitalist">Capitalist</button>
+                <button class="filter-btn" data-status="unverified">Unverified</button>
+                <button class="filter-btn" data-status="trash">Trash</button>
             </div>
 
             <div class="table-container">
                 <table class="services-table">
                     <thead>
                         <tr>
-                            <th>name</th>
-                            <th>website</th>
-                            <th>description</th>
-                            <th>country</th>
-                            <th>log policy*</th>
-                            <th>dmca</th>
-                            <th>owns servers</th>
-                            <th>payment methods</th>
-                            <th>status</th>
-                            <th>last change</th>
+                            <th>Service</th>
+                            <th>Website</th>
+                            <th>Category</th>
+                            <th>Company</th>
+                            <th>Country <span title="Country flag shown">🏳️</span></th>
+                            <th>Log Policy</th>
+                            <th>DMCA</th>
+                            <th>Payment Methods</th>
+                            <th>Status</th>
+                            <th>Last Change</th>
                         </tr>
                     </thead>
                     <tbody id="servicesTableBody">
-                        <!-- Services will be populated by JavaScript -->
+                        <!-- Services will be loaded here by Rust or JS. Country flag is shown using <img src="flags/xx.png"> -->
                     </tbody>
                 </table>
             </div>
         </main>
     </div>
 
-    <!-- Submit Service Modal -->
+    <!-- Submit Modal -->
     <div id="submitModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -175,52 +185,42 @@
                     <label for="serviceCategory">Category:</label>
                     <select id="serviceCategory" required>
                         <option value="">Select Category</option>
+                        <option value="email">Email</option>
+                        <option value="vpn">VPN</option>
                         <option value="hosting">Hosting</option>
                         <option value="domains">Domains</option>
-                        <option value="vpn">VPN</option>
-                        <option value="messengers">Messengers</option>
                         <option value="crypto">Crypto</option>
-                        <option value="email">Email</option>
-                        <option value="cdn">CDN</option>
-                        <option value="uploaders">Uploaders</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="social">Social</option>
+                        <option value="tools">Tools</option>
                         <option value="products">Products</option>
                         <option value="password-managers">Password Managers</option>
                         <option value="chess">Chess</option>
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="serviceCompany">Company:</label>
+                    <input type="text" id="serviceCompany" required>
+                </div>
+                <div class="form-group">
                     <label for="serviceCountry">Country:</label>
-                    <input type="text" id="serviceCountry" placeholder="e.g., us, ch, de">
+                    <input type="text" id="serviceCountry" required>
                 </div>
                 <div class="form-group">
                     <label for="serviceLogPolicy">Log Policy:</label>
-                    <select id="serviceLogPolicy" required>
-                        <option value="">Select Policy</option>
-                        <option value="No logs">No logs</option>
-                        <option value="Requires email confirmation">Requires email confirmation</option>
-                        <option value="Requires KYC">Requires KYC</option>
-                    </select>
+                    <input type="text" id="serviceLogPolicy" required>
                 </div>
                 <div class="form-group">
-                    <label for="serviceDMCA">DMCA Policy:</label>
-                    <select id="serviceDMCA" required>
-                        <option value="">Select Policy</option>
-                        <option value="Ignored">Ignored</option>
-                        <option value="Enforced">Enforced</option>
-                    </select>
+                    <label for="serviceDmca">DMCA:</label>
+                    <input type="text" id="serviceDmca" required>
                 </div>
                 <div class="form-group">
                     <label for="serviceOwnsServers">Owns Servers:</label>
-                    <select id="serviceOwnsServers" required>
-                        <option value="">Select</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                        <option value="Yes & No">Yes & No</option>
-                    </select>
+                    <input type="text" id="serviceOwnsServers" required>
                 </div>
                 <div class="form-group">
-                    <label for="servicePaymentMethods">Payment Methods:</label>
-                    <input type="text" id="servicePaymentMethods" placeholder="e.g., Crypto, Credit Card, PayPal">
+                    <label for="servicePaymentMethods">Payment Methods (comma-separated):</label>
+                    <input type="text" id="servicePaymentMethods" required>
                 </div>
                 <div class="form-group">
                     <label for="serviceStatus">Status:</label>

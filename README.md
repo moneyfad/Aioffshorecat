@@ -1,197 +1,205 @@
-# Offshore Directory - Enhanced Edition
+# 🌊 Offshore Directory - Rust WASM Powered
 
-A comprehensive directory of privacy-focused services, hosting providers, VPNs, email services, and more. This enhanced version includes additional services, updated information, and a modern Rust-inspired design.
+A fast, modern web application that combines the power of Rust with universal web compatibility. The backend logic is written in Rust and compiled to WebAssembly for maximum performance, while the frontend uses standard HTML/CSS/JavaScript to ensure compatibility with all devices (laptops, phones, consoles, etc.).
 
-## 🚀 Recent Updates (July 30, 2025)
+## 🚀 Features
 
-### ✨ New Features Added
+- **Rust Performance**: Backend logic written in Rust, compiled to WASM for speed
+- **Universal Compatibility**: Works on all devices and browsers
+- **Modern UI**: Responsive design that adapts to any screen size
+- **Real-time Search**: Instant filtering powered by Rust
+- **Category Filtering**: Filter by service categories
+- **Status Filtering**: Filter by service status (premium, verified, etc.)
+- **Cross-Platform**: No special software required - runs in any web browser
 
-#### ♟️ New Chess Category
-- **Lichess** (lichess.org) - Free, open-source chess server with no ads, no tracking, and strong privacy protection. Rated as **premium** due to excellent community reviews and privacy focus.
-- **Chess.com** (chess.com) - Popular chess platform with extensive features, lessons, and tournaments. Rated as **capitalist** due to mixed reviews about premium features and data collection.
+## 🛠️ Technology Stack
 
-#### 📧 New Email Providers
-- **PissMail** (pissmail.com) - Edgy email service with privacy-focused domains
-- **MailHaven** (mailhaven.su) - Privacy-focused email with strong encryption
-- **Cock.li** (cock.li) - Vincent Canfield's privacy email service
-- **Tutanota** (tutanota.com) - German encrypted email with zero-knowledge encryption
-- **Mailfence** (mailfence.com) - Belgian encrypted email with digital signatures
-- **Posteo** (posteo.de) - German green email provider
-- **StartMail** (startmail.com) - Dutch encrypted email with custom domains
-- **Kolab Now** (kolabnow.com) - Swiss secure email and collaboration
-- **Runbox** (runbox.com) - Norwegian email with privacy protection
-- **Hushmail** (hushmail.com) - Canadian encrypted email for healthcare/legal
+- **Backend**: Rust (compiled to WebAssembly)
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Build Tool**: Trunk for WASM compilation
+- **Styling**: Modern CSS with responsive design
+- **Icons**: Font Awesome
+- **Fonts**: JetBrains Mono
 
-#### 🔐 New Password Managers Category
-- **Bitwarden** (bitwarden.com) - Open-source password manager
-- **KeePass** (keepass.info) - Open-source local password manager
-- **1Password** (1password.com) - Premium password manager
-- **Dashlane** (dashlane.com) - Password manager with VPN
-- **LastPass** (lastpass.com) - Popular cross-platform password manager
-- **NordPass** (nordpass.com) - Zero-knowledge password manager
-- **ProtonPass** (proton.me/pass) - Proton's password manager
-- **Keeper** (keepersecurity.com) - Enterprise password manager
-- **RoboForm** (roboform.com) - Password manager with form filling
-- **Enpass** (enpass.io) - Offline password manager
+## 📦 Installation
 
-#### 📱 Updated Product Status
-- **iPhone (Jailbroken)** - Marked as "trash" due to limited jailbreak availability on newer iOS versions
-- Enhanced descriptions for privacy-focused devices
+### Prerequisites
 
-### 🎨 Design Improvements
+1. **Install Rust**: https://rustup.rs/
+2. **Install Trunk** (for WASM builds):
+   ```bash
+   cargo install trunk
+   ```
+3. **Add WASM target**:
+   ```bash
+   rustup target add wasm32-unknown-unknown
+   ```
 
-#### Modern Rust-Inspired UI
-- **Color Scheme**: Dark theme with orange/teal accents
-- **Typography**: JetBrains Mono font for that developer aesthetic
-- **Gradients**: Beautiful gradient effects on buttons and active states
-- **Shadows**: Layered shadow system for depth
-- **Animations**: Smooth transitions and hover effects
-- **Responsive**: Mobile-friendly design with proper breakpoints
+### Running the Application
 
-#### Enhanced Visual Elements
-- **Status Badges**: Color-coded status indicators with icons
-- **Country Flags**: Visual flag indicators for service locations
-- **Payment Methods**: Tagged payment options for easy scanning
-- **Hover Effects**: Interactive elements with smooth transitions
-- **Loading States**: Professional loading animations
+#### Web Application (Recommended)
+```bash
+trunk serve
+```
+Then open http://localhost:8080 in your browser.
 
-#### 🎯 More Button for Better Spacing
-- **Responsive Navigation**: Automatically hides navigation items on smaller screens
-- **More Button**: Shows/hides additional categories to save space
-- **Device Optimization**: Optimized for laptop, mobile, and console displays
-- **Touch-Friendly**: Proper sizing for touch interfaces
+#### Build for Production
+```bash
+trunk build --release
+```
 
-### 📊 Data Updates
+#### Using Build Scripts
+```bash
+# Linux/Mac
+./build.sh
 
-#### Date Updates
-- All service entries updated to **July 29, 2025**
-- Main page shows **July 30, 2025** as last update
-- Total sites count increased to **600+**
+# Windows
+build.bat
+```
 
-#### Service Categories
-- **Recommended** - Premium privacy services
-- **Hosting** - VPS and web hosting providers
-- **Domains** - Domain registration services
-- **VPN** - Virtual Private Network services
-- **Messengers** - Secure messaging platforms
-- **Crypto** - Cryptocurrency exchanges
-- **Email** - Privacy-focused email services
-- **CDN** - Content Delivery Networks
-- **Uploaders** - File hosting and cloud storage
-- **Products** - Privacy-focused hardware
-- **Password Managers** - Secure password management
-- **Chess** - Chess platforms and services
-
-### 🔍 Enhanced Functionality
-
-#### Search & Filtering
-- **Real-time Search**: Instant filtering across all fields
-- **Category Filtering**: Filter by service type
-- **Status Filtering**: Filter by verification status
-- **Combined Filters**: Use multiple filters simultaneously
-
-#### Status System
-- **⭐ Premium** - Top-tier privacy services
-- **✅ Verified** - Confirmed reliable services
-- **💰 Capitalist** - Large corporate services
-- **❓ Unverified** - Services requiring verification
-- **🗑️ Trash** - Services with issues or limitations
-
-## 🛠️ Technical Features
-
-### Frontend Technologies
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS variables
-- **JavaScript (ES6+)** - Interactive functionality
-- **Font Awesome** - Icon library
-- **Google Fonts** - Typography
-
-### Browser Support
-- Chrome/Chromium (recommended)
-- Firefox
-- Safari
-- Edge
-- Mobile browsers
-
-### Performance
-- **Fast Loading**: Optimized assets and code
-- **Responsive Design**: Works on all screen sizes
-- **Accessibility**: WCAG compliant design
-- **SEO Friendly**: Proper meta tags and structure
-
-## 📁 File Structure
+## 🏗️ Project Structure
 
 ```
 offshore-directory/
-├── index.html              # Main application page
-├── script.js               # JavaScript functionality
-├── styles.css              # Modern CSS styling
+├── src/
+│   └── lib.rs              # Rust backend logic (WASM)
+├── Cargo.toml              # Rust dependencies
+├── Trunk.toml              # Web build configuration
+├── index.html              # Main web page
+├── styles.css              # CSS styling
+├── script.js               # JavaScript frontend logic
 ├── flags/                  # Country flag images
-├── offshore_scraper.html   # Data scraping tool
-├── README.md              # This documentation
-└── download_flags.ps1     # Flag download script
+├── build.sh                # Linux/Mac build script
+├── build.bat               # Windows build script
+└── README.md               # This file
 ```
 
-## 🚀 Getting Started
+## 🎨 Features
 
-1. **Clone or Download** the repository
-2. **Open** `index.html` in your web browser
-3. **Browse** services by category or use search
-4. **Filter** by status to find the best services
-5. **Click** on website links to visit services
+### Service Categories
+- Email Services
+- VPN Services
+- Hosting Services
+- Domain Services
+- Cryptocurrency Services
+- Gaming Services
+- Social Media
+- Tools
+- Products
+- Password Managers
+- Chess Services
 
-## 🔧 Customization
+### Service Status Types
+- **Premium**: High-quality, recommended services
+- **Verified**: Trusted and verified services
+- **Capitalist**: Commercial services with mixed reviews
+- **Unverified**: Services requiring verification
+- **Trash**: Services to avoid
+
+### Search and Filtering
+- Real-time search across service names and descriptions (powered by Rust)
+- Filter by category
+- Filter by status
+- Combined filtering (search + category + status)
+
+## 🔧 Development
 
 ### Adding New Services
-Edit `script.js` and add new entries to the `servicesData` array:
+Edit the `load_services()` function in `src/lib.rs`:
 
-```javascript
-{
-    id: 999,
-    name: "Service Name",
-    website: "service.com",
-    description: "Service description",
-    category: "category",
-    company: "Company Name",
-    country: "country_code",
-    logPolicy: "Logging policy",
-    dmca: "DMCA policy",
-    ownsServers: "Yes/No",
-    paymentMethods: ["Method1", "Method2"],
-    status: "status",
-    lastChange: "YYYY-MM-DD"
-}
+```rust
+self.services.push(Service::new(
+    id,                    // Unique ID
+    "Service Name",        // Service name
+    "service.com",         // Website URL
+    "Description...",      // Service description
+    "category",            // Category (email, vpn, etc.)
+    "Company Name",        // Company name
+    "country_code",        // Country code (us, de, etc.)
+    "Log Policy",          // Logging policy
+    "DMCA Policy",         // DMCA policy
+    "Owns Servers",        // Server ownership
+    vec!["Payment", "Methods"], // Payment methods
+    "status",              // Status (premium, verified, etc.)
+    "2025-07-29"          // Last update date
+));
 ```
 
-### Modifying Styles
-Edit `styles.css` to customize the appearance:
+### Customizing the UI
+The UI is built using standard HTML/CSS/JavaScript. Modify `styles.css` for styling changes and `index.html` for structure changes.
 
-```css
-:root {
-    --accent-primary: #your-color;
-    --bg-primary: #your-bg-color;
-    /* ... other variables */
-}
-```
+## 🌐 Web Deployment
+
+To deploy the web version:
+
+1. Build the application:
+   ```bash
+   trunk build --release
+   ```
+
+2. Upload the contents of the `dist/` folder to your web server.
+
+## 📱 Device Compatibility
+
+### Supported Devices
+- ✅ **Desktop/Laptop**: Windows, macOS, Linux
+- ✅ **Mobile Phones**: iOS Safari, Android Chrome, etc.
+- ✅ **Tablets**: iPad, Android tablets
+- ✅ **Gaming Consoles**: PlayStation, Xbox (with web browsers)
+- ✅ **Smart TVs**: Any device with a web browser
+- ✅ **E-readers**: Kindle, etc. (with browsers)
+
+### Browser Support
+The web version works in all modern browsers that support WebAssembly:
+- Chrome 57+
+- Firefox 52+
+- Safari 11+
+- Edge 16+
+- Mobile browsers
+
+## 🚀 Performance Benefits
+
+### Rust WASM Backend
+- **Fast Search**: Instant filtering of thousands of services
+- **Efficient Memory**: Optimized data structures
+- **Type Safety**: Compile-time error checking
+- **Small Bundle**: Efficient WASM compilation
+
+### Universal Frontend
+- **No Installation**: Works immediately in any browser
+- **Responsive Design**: Adapts to any screen size
+- **Touch Friendly**: Optimized for mobile devices
+- **Accessibility**: WCAG compliant design
 
 ## 🤝 Contributing
 
-1. **Fork** the repository
-2. **Add** new services or improve existing ones
-3. **Test** your changes
-4. **Submit** a pull request
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test on multiple devices and browsers
+5. Submit a pull request
 
 ## 📄 License
 
 This project is open source and available under the MIT License.
+
+## 🆚 Migration from JavaScript
+
+This Rust WASM version replaces the previous pure JavaScript implementation with:
+- **Better Performance**: Rust-powered search and filtering
+- **Type Safety**: Compile-time error checking
+- **Smaller Bundle**: Efficient WASM compilation
+- **Universal Access**: Works on any device with a browser
+- **Modern Architecture**: Separation of concerns (Rust backend, JS frontend)
+
+The functionality remains the same, but with improved performance and reliability.
 
 ## 🔗 Links
 
 - **Original Inspiration**: offshore.cat
 - **PissMail**: https://pissmail.com/
 - **MailHaven**: https://mailhaven.su/
-- **Lichess**: https://lichess.org/
-- **Chess.com**: https://chess.com/
+- **Lagging Chess**: https://lagging.site/
 - **Font Awesome**: https://fontawesome.com/
 - **JetBrains Mono**: https://www.jetbrains.com/lp/mono/
 
@@ -201,4 +209,4 @@ For questions or suggestions, please open an issue on the repository.
 
 ---
 
-**Built with ❤️ for the privacy community** 
+**Built with ❤️ for the privacy community using Rust and WebAssembly** 

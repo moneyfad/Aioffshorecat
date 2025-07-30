@@ -1,3 +1,47 @@
+// --- THEME TOGGLE LOGIC ---
+function applyTheme() {
+    let theme = localStorage.getItem('theme');
+    if (!theme || theme === 'system') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark-mode');
+            document.body.setAttribute('data-theme', 'dark');
+            if (document.getElementById('themeToggle')) document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            document.body.classList.remove('dark-mode');
+            document.body.setAttribute('data-theme', 'light');
+            if (document.getElementById('themeToggle')) document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    } else if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.body.setAttribute('data-theme', 'dark');
+        if (document.getElementById('themeToggle')) document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.body.setAttribute('data-theme', 'light');
+        if (document.getElementById('themeToggle')) document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+function toggleTheme() {
+    let theme = localStorage.getItem('theme');
+    if (!theme || theme === 'system') {
+        theme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    } else if (theme === 'dark') {
+        theme = 'light';
+    } else {
+        theme = 'dark';
+    }
+    localStorage.setItem('theme', theme);
+    applyTheme();
+}
+
+// Listen to system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+        applyTheme();
+    }
+});
+// --- END THEME TOGGLE LOGIC ---
 // Enhanced offshore services data with new providers and updated information
 const servicesData = [
     // RECOMMENDED SERVICES (Premium)
@@ -3452,11 +3496,26 @@ let searchTerm = '';
 
 // Initialize the application
 function init() {
+    // DOM elements for theme and nav
+    window.searchInput = document.getElementById('searchInput');
+    window.servicesTableBody = document.getElementById('servicesTableBody');
+    window.navLinks = document.querySelectorAll('.nav-link');
+    window.filterButtons = document.querySelectorAll('.filter-btn');
+    window.moreBtn = document.getElementById('moreBtn');
+    window.submitBtn = document.getElementById('submitBtn');
+    window.submitModal = document.getElementById('submitModal');
+    window.closeModal = document.querySelector('.close');
+    window.submitForm = document.getElementById('submitForm');
+    window.telegramBtn = document.getElementById('telegramBtn');
+    window.themeToggle = document.getElementById('themeToggle');
+
     renderServices();
     setupEventListeners();
     setupMoreButton();
     setupModal();
     setupButtonActions();
+    if (window.themeToggle) window.themeToggle.addEventListener('click', toggleTheme);
+    applyTheme();
 }
 
 // Setup event listeners
@@ -3678,10 +3737,10 @@ function getStatusDisplay(status) {
 
 // Get country flag with local file path
 function getCountryFlag(country) {
-    if (country === 'unknown') {
+    if (!country || country === 'unknown') {
         return '<span class="country-flag unknown">?</span>';
     }
-    return `<span class="country-flag" style="background-image: url('flags/${country}.png');"></span>`;
+    return `<img class="country-flag" src="flags/${country}.png" alt="${country.toUpperCase()}" onerror="this.style.display='none'">`;
 }
 
 // Render services
