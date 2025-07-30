@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offshore directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>offshore directory</h1>
+                <button class="submit-btn">
+                    <i class="fas fa-plus"></i>
+                    submit service
+                </button>
+            </div>
+            <nav>
+                <a href="#" class="nav-link active" data-category="all">all</a>
+                <a href="#" class="nav-link" data-category="recommended">recommended</a>
+                <a href="#" class="nav-link" data-category="hosting">hosting</a>
+                <a href="#" class="nav-link" data-category="domains">domains</a>
+                <a href="#" class="nav-link" data-category="vpn">vpn</a>
+                <a href="#" class="nav-link" data-category="messengers">messengers</a>
+                <a href="#" class="nav-link" data-category="crypto">crypto</a>
+                <a href="#" class="nav-link" data-category="email">email</a>
+                <a href="#" class="nav-link" data-category="cdn">cdn</a>
+                <a href="#" class="nav-link" data-category="uploaders">uploaders</a>
+                <a href="#" class="nav-link" data-category="products">products</a>
+            </nav>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stats-left">
+                <span class="cat-logo">🐱</span>
+                <span class="project-tag">a doxing.lol project</span>
+            </div>
+            <div class="stats-center">
+                <span class="updated-date">updated 2025-01-29</span>
+                <span class="total-sites">total sites 500+</span>
+            </div>
+            <div class="status-legend">
+                <span class="legend-item"><i class="fas fa-star"></i> premium</span>
+                <span class="legend-item"><i class="fas fa-check"></i> verified</span>
+                <span class="legend-item"><i class="fas fa-coins"></i> capitalist</span>
+                <span class="legend-item"><i class="fas fa-question"></i> unverified</span>
+                <span class="legend-item"><i class="fas fa-times"></i> trash</span>
+            </div>
+            <div class="stats-right">
+                <button class="telegram-btn">
+                    <i class="fab fa-telegram"></i>
+                    telegram
+                </button>
+            </div>
+        </div>
+
+        <div class="slogan">
+            egirls aren't real. stopped being tricked by feminine males.
+        </div>
+
+        <main>
+            <div class="search-container">
+                <label>search:</label>
+                <input type="text" id="searchInput" placeholder="search records" autocomplete="off">
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">all</button>
+                <button class="filter-btn" data-filter="premium">premium</button>
+                <button class="filter-btn" data-filter="verified">verified</button>
+                <button class="filter-btn" data-filter="capitalist">capitalist</button>
+                <button class="filter-btn" data-filter="unverified">unverified</button>
+                <button class="filter-btn" data-filter="trash">trash</button>
+            </div>
+
+            <div class="table-container">
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>website</th>
+                            <th>description</th>
+                            <th>country</th>
+                            <th>log policy*</th>
+                            <th>dmca</th>
+                            <th>owns servers</th>
+                            <th>payment methods</th>
+                            <th>status</th>
+                            <th>last change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="servicesTableBody">
+                        <!-- Services will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
