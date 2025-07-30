@@ -9,11 +9,58 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Banner Ads Section -->
+    <div class="banner-ads">
+        <div class="banner-container">
+            <!-- Cracked.to Banner -->
+            <div class="banner-ad">
+                <a href="https://cracked.to" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/8XZqJ3L.png" alt="Cracked.to Banner" class="banner-image">
+                </a>
+            </div>
+            
+            <!-- Sinister.ly Banner -->
+            <div class="banner-ad">
+                <a href="https://sinister.ly" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/L2QpF9M.png" alt="Sinister.ly Banner" class="banner-image">
+                </a>
+            </div>
+            
+            <!-- Offshore.cat Banner -->
+            <div class="banner-ad">
+                <a href="https://offshore.cat" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/YqK7NvR.png" alt="Offshore.cat Banner" class="banner-image">
+                </a>
+            </div>
+            
+            <!-- Dump.li Banner -->
+            <div class="banner-ad">
+                <a href="https://dump.li" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/P9XmK2F.png" alt="Dump.li Banner" class="banner-image">
+                </a>
+            </div>
+            
+            <!-- Minecraft Server Banner -->
+            <div class="banner-ad">
+                <a href="#" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/H7JqW5L.png" alt="Minecraft Server Banner" class="banner-image">
+                </a>
+            </div>
+            
+            <!-- VPN Service Banner -->
+            <div class="banner-ad">
+                <a href="#" target="_blank" class="banner-link">
+                    <img src="https://i.imgur.com/V3NqR8M.png" alt="VPN Service Banner" class="banner-image">
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <div class="header-top">
                 <h1>offshore directory</h1>
-                <button class="submit-btn">
+                <button class="submit-btn" id="submitBtn">
                     <i class="fas fa-plus"></i>
                     submit service
                 </button>
@@ -30,6 +77,12 @@
                 <a href="#" class="nav-link" data-category="cdn">cdn</a>
                 <a href="#" class="nav-link" data-category="uploaders">uploaders</a>
                 <a href="#" class="nav-link" data-category="products">products</a>
+                <a href="#" class="nav-link" data-category="password-managers">password managers</a>
+                <a href="#" class="nav-link" data-category="chess">chess</a>
+                <button class="more-btn" id="moreBtn">
+                    <i class="fas fa-ellipsis-h"></i>
+                    more
+                </button>
             </nav>
         </header>
 
@@ -39,8 +92,8 @@
                 <span class="project-tag">a doxing.lol project</span>
             </div>
             <div class="stats-center">
-                <span class="updated-date">updated 2025-01-29</span>
-                <span class="total-sites">total sites 500+</span>
+                <span class="updated-date">updated 2025-07-30</span>
+                <span class="total-sites">total sites 600+</span>
             </div>
             <div class="status-legend">
                 <span class="legend-item"><i class="fas fa-star"></i> premium</span>
@@ -50,7 +103,7 @@
                 <span class="legend-item"><i class="fas fa-times"></i> trash</span>
             </div>
             <div class="stats-right">
-                <button class="telegram-btn">
+                <button class="telegram-btn" id="telegramBtn">
                     <i class="fab fa-telegram"></i>
                     telegram
                 </button>
@@ -98,6 +151,91 @@
                 </table>
             </div>
         </main>
+    </div>
+
+    <!-- Submit Service Modal -->
+    <div id="submitModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Submit New Service</h2>
+            <form id="submitForm">
+                <div class="form-group">
+                    <label for="serviceName">Service Name:</label>
+                    <input type="text" id="serviceName" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceWebsite">Website:</label>
+                    <input type="url" id="serviceWebsite" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDescription">Description:</label>
+                    <textarea id="serviceDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="serviceCategory">Category:</label>
+                    <select id="serviceCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="hosting">Hosting</option>
+                        <option value="domains">Domains</option>
+                        <option value="vpn">VPN</option>
+                        <option value="messengers">Messengers</option>
+                        <option value="crypto">Crypto</option>
+                        <option value="email">Email</option>
+                        <option value="cdn">CDN</option>
+                        <option value="uploaders">Uploaders</option>
+                        <option value="products">Products</option>
+                        <option value="password-managers">Password Managers</option>
+                        <option value="chess">Chess</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceCountry">Country:</label>
+                    <input type="text" id="serviceCountry" placeholder="e.g., us, ch, de">
+                </div>
+                <div class="form-group">
+                    <label for="serviceLogPolicy">Log Policy:</label>
+                    <select id="serviceLogPolicy" required>
+                        <option value="">Select Policy</option>
+                        <option value="No logs">No logs</option>
+                        <option value="Requires email confirmation">Requires email confirmation</option>
+                        <option value="Requires KYC">Requires KYC</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDMCA">DMCA Policy:</label>
+                    <select id="serviceDMCA" required>
+                        <option value="">Select Policy</option>
+                        <option value="Ignored">Ignored</option>
+                        <option value="Enforced">Enforced</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceOwnsServers">Owns Servers:</label>
+                    <select id="serviceOwnsServers" required>
+                        <option value="">Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Yes & No">Yes & No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="servicePaymentMethods">Payment Methods:</label>
+                    <input type="text" id="servicePaymentMethods" placeholder="e.g., Crypto, Credit Card, PayPal">
+                </div>
+                <div class="form-group">
+                    <label for="serviceStatus">Status:</label>
+                    <select id="serviceStatus" required>
+                        <option value="">Select Status</option>
+                        <option value="premium">Premium</option>
+                        <option value="verified">Verified</option>
+                        <option value="capitalist">Capitalist</option>
+                        <option value="unverified">Unverified</option>
+                        <option value="trash">Trash</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-form-btn">Submit Service</button>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
